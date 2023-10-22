@@ -74,8 +74,7 @@
 		B83D08502AE3EDB3003A4EF5 /* SDSwiftUICoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				B83D08AD2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift */,
-				B83D08AB2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift */,
+				B83D08AF2AE5086C003A4EF5 /* Default Coordinators */,
 				B83D088B2AE46B22003A4EF5 /* Some Destination View */,
 				B83D08732AE457DE003A4EF5 /* Tab View */,
 				B83D08512AE3EDB3003A4EF5 /* SDSwiftUICoordinatorApp.swift */,
@@ -136,6 +135,15 @@
 				B83D088E2AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift */,
 			);
 			path = "Some Destination View";
+			sourceTree = "<group>";
+		};
+		B83D08AF2AE5086C003A4EF5 /* Default Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B83D08AB2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift */,
+				B83D08AD2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift */,
+			);
+			path = "Default Coordinators";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -11,11 +11,13 @@ import Coordinator
 @main
 struct SDSwiftUICoordinatorApp: App {
     @State var tabViewCoordinator = DefaultTabViewCoordinator()
+    @State var presentationCoordinator = DefaultPresentationCoordinator()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(tabViewCoordinator)
+                .environment(presentationCoordinator)
         }
     }
 }

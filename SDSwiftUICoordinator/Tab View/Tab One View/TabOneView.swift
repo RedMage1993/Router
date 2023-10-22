@@ -10,6 +10,7 @@ import SwiftUI
 import Coordinator
 
 struct TabOneView: View {
+    @Environment(DefaultNavigationCoordinator.self) var navigationCoordinator
     @State var viewModel: ViewModel
     
     var body: some View {
@@ -17,7 +18,7 @@ struct TabOneView: View {
             Text(viewModel.title)
             
             Button {
-                viewModel.pushSomething()
+                navigationCoordinator.push(destination: .destinationOne)
             } label: {
                 Text("Push Something")
             }

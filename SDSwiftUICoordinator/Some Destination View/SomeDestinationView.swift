@@ -10,6 +10,8 @@ import SwiftUI
 import Coordinator
 
 struct SomeDestinationView: View {
+    @Environment(DefaultPresentationCoordinator.self) var presentationCoordinator
+    @Environment(DefaultNavigationCoordinator.self) var navigationCoordinator
     @State var viewModel: ViewModel
     
     var body: some View {
@@ -17,19 +19,19 @@ struct SomeDestinationView: View {
             Text(viewModel.title)
             
             Button {
-                viewModel.pushSomething()
+                navigationCoordinator.push(destination: .destinationOne)
             } label: {
                 Text("Push Something")
             }
             
             Button {
-                viewModel.presentSomeSheet()
+                presentationCoordinator.present(sheet: .someSheet)
             } label: {
                 Text("Present Some Sheet")
             }
             
             Button {
-                viewModel.presentSomeFullScreenCover()
+                presentationCoordinator.present(fullScreenCover: .someFullScreenCover)
             } label: {
                 Text("Present Some Full Screen Cover")
             }

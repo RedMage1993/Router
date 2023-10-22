@@ -8,9 +8,7 @@
 import Foundation
 import SwiftUI
 
-public typealias RootCoordinator = NavigationCoordinator & PresentationCoordinator
-
-public struct RootCoordinatorView<Root: View, Coordinator: RootCoordinator>: View {
+public struct CoordinatedNavigationView<Root: View, Coordinator: NavigationCoordinator>: View {
     let rootView: Root
     @Bindable var coordinator: Coordinator
     
@@ -22,8 +20,6 @@ public struct RootCoordinatorView<Root: View, Coordinator: RootCoordinator>: Vie
     public var body: some View {
         NavigationStack(path: $coordinator.path) {
             rootView
-                .sheet(item: $coordinator.sheet, content: coordinator.sheetView)
-                .fullScreenCover(item: $coordinator.fullScreenCover, content: coordinator.fullScreenCoverView)
                 .navigationDestination(for: Coordinator.Destination.self, destination: coordinator.navigationDestinationView)
         }
     }

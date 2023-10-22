@@ -1,5 +1,5 @@
 //
-//  DefaultRootCoordinator.swift
+//  DefaultPresentationCoordinator.swift
 //  SDSwiftUICoordinator
 //
 //  Created by Fritz Ammon on 10/21/23.
@@ -9,21 +9,9 @@ import Foundation
 import SwiftUI
 import Coordinator
 
-@Observable class DefaultRootCoordinator: RootCoordinator {
-    typealias Destination = CoordinatedDestination
-    
-    var path = NavigationPath()
-    
+@Observable class DefaultPresentationCoordinator: PresentationCoordinator {
     var sheet: CoordinatedSheet?
     var fullScreenCover: CoordinatedFullScreenCover?
-    
-    @ViewBuilder
-    func navigationDestinationView(for destination: Destination) -> some View {
-        switch destination {
-        case .destinationOne:
-            SomeDestinationView(viewModel: .init(coordinator: self, title: "Some Destination View"))
-        }
-    }
     
     @ViewBuilder
     func sheetView(for sheet: CoordinatedSheet) -> some View {
@@ -36,17 +24,20 @@ import Coordinator
     @ViewBuilder
     func fullScreenCoverView(for fullScreenCover: CoordinatedFullScreenCover) -> some View {
         switch fullScreenCover {
-        case .nothing:
-            EmptyView()
+        case .someFullScreenCover:
+            VStack {
+                Text("Some Full Screen Cover")
+                Button {
+                    self.dismissFullScreenCover()
+                } label: {
+                    Text("Dismiss")
+                }
+            }
         }
     }
 }
 
-extension DefaultRootCoordinator {
-    enum CoordinatedDestination: Hashable {
-        case destinationOne
-    }
-    
+extension DefaultPresentationCoordinator {
     enum CoordinatedSheet: Identifiable {
         case someSheet
         
@@ -54,7 +45,7 @@ extension DefaultRootCoordinator {
     }
     
     enum CoordinatedFullScreenCover: Identifiable {
-        case nothing
+        case someFullScreenCover
         
         public var id: String { String(describing: self) }
     }

@@ -14,21 +14,23 @@ import Coordinator
     
     var selectedTab = CoordinatedTabItem.allCases.first!
     
-    let tabOneCoordinator = DefaultRootCoordinator()
-    let tabTwoCoordinator = DefaultRootCoordinator()
+    let tabOneCoordinator = DefaultNavigationCoordinator()
+    let tabTwoCoordinator = DefaultNavigationCoordinator()
     
     @ViewBuilder
     func tabView(for tabItem: CoordinatedTabItem) -> some View {
         switch tabItem {
         case .tabOne:
-            RootCoordinatorView(coordinator: tabOneCoordinator) {
-                TabOneView(viewModel: .init(coordinator: tabOneCoordinator, title: "Tab One View"))
+            CoordinatedNavigationView(coordinator: tabOneCoordinator) {
+                TabOneView(viewModel: .init(title: "Tab One View"))
             }
+            .environment(tabOneCoordinator)
             .tabItemLabel(title: "Tab One", imageName: "1.circle.fill")
         case .tabTwo:
-            RootCoordinatorView(coordinator: tabTwoCoordinator) {
-                TabTwoView(viewModel: .init(coordinator: tabTwoCoordinator, title: "Tab Two View"))
+            CoordinatedNavigationView(coordinator: tabTwoCoordinator) {
+                TabTwoView(viewModel: .init(title: "Tab Two View"))
             }
+            .environment(tabTwoCoordinator)
             .tabItemLabel(title: "Tab Two", imageName: "2.circle.fill")
         }
     }

@@ -10,9 +10,12 @@ import Coordinator
 
 struct ContentView: View {
     @Environment(DefaultTabViewCoordinator.self) var tabViewCoordinator
+    @Environment(DefaultPresentationCoordinator.self) var presentationCoordinator
     
     var body: some View {
-        CoordinatedTabView(coordinator: tabViewCoordinator)
+        CoordinatedPresentationView(coordinator: presentationCoordinator) {
+            CoordinatedTabView(coordinator: tabViewCoordinator)
+        }
     }
 }
 

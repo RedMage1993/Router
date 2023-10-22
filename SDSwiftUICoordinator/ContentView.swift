@@ -6,16 +6,13 @@
 //
 
 import SwiftUI
+import Coordinator
 
 struct ContentView: View {
+    @Environment(DefaultTabViewCoordinator.self) var tabViewCoordinator
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        CoordinatedTabView(coordinator: tabViewCoordinator)
     }
 }
 

@@ -11,7 +11,7 @@ import Coordinator
 
 struct SomeDestinationView: View {
     @Environment(HomePresentator.self) var homePresentator
-    @Environment(HomeRouter.self) var navigationCoordinator
+    @Environment(HomeRouter.self) var homeRouter
     @State var viewModel: ViewModel
     
     var body: some View {
@@ -19,7 +19,7 @@ struct SomeDestinationView: View {
             Text(viewModel.title)
             
             Button {
-                navigationCoordinator.push(destination: .destinationOne)
+                homeRouter.push(destination: .destinationOne)
             } label: {
                 Text("Push Something")
             }

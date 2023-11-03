@@ -1,6 +1,6 @@
 //
-//  RootCoordinatorView.swift
-//  sd-ios-swiftui
+//  CoordinatedNavigationView.swift
+//  SDSwiftUICoordinator
 //
 //  Created by Fritz Ammon on 6/3/23.
 //

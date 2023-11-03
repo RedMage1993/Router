@@ -1,6 +1,6 @@
 //
 //  NavigationCoordinator.swift
-//  sd-ios-swiftui
+//  SDSwiftUICoordinator
 //
 //  Created by Fritz Ammon on 6/3/23.
 //

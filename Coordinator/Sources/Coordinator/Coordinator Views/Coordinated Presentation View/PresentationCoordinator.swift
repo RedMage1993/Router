@@ -1,6 +1,6 @@
 //
-//  ViewCoordinator.swift
-//  sd-ios-swiftui
+//  PresentationCoordinator.swift
+//  SDSwiftUICoordinator
 //
 //  Created by Fritz Ammon on 5/23/23.
 //

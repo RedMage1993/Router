@@ -1,6 +1,6 @@
 //
 //  CoordinatedTabView.swift
-//  sd-ios-swiftui
+//  SDSwiftUICoordinator
 //
 //  Created by Fritz Ammon on 5/23/23.
 //

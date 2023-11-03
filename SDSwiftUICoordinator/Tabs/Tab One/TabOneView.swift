@@ -10,7 +10,7 @@ import SwiftUI
 import Coordinator
 
 struct TabOneView: View {
-    @Environment(DefaultNavigationCoordinator.self) var navigationCoordinator
+    @Environment(HomeRouter.self) var navigationCoordinator
     @State var viewModel: ViewModel
     
     var body: some View {

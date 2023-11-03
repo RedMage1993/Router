@@ -12,15 +12,15 @@
 		B83D08562AE3EDB5003A4EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83D08552AE3EDB5003A4EF5 /* Assets.xcassets */; };
 		B83D08592AE3EDB5003A4EF5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83D08582AE3EDB5003A4EF5 /* Preview Assets.xcassets */; };
 		B83D086A2AE455FB003A4EF5 /* Coordinator in Frameworks */ = {isa = PBXBuildFile; productRef = B83D08692AE455FB003A4EF5 /* Coordinator */; };
-		B83D086C2AE456CF003A4EF5 /* DefaultTabViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D086B2AE456CF003A4EF5 /* DefaultTabViewCoordinator.swift */; };
+		B83D086C2AE456CF003A4EF5 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D086B2AE456CF003A4EF5 /* TabCoordinator.swift */; };
 		B83D08752AE457F1003A4EF5 /* TabOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08742AE457F1003A4EF5 /* TabOneView.swift */; };
 		B83D08772AE457FC003A4EF5 /* TabOneView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08762AE457FC003A4EF5 /* TabOneView+ViewModel.swift */; };
 		B83D08882AE4691B003A4EF5 /* TabTwoView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08852AE4691B003A4EF5 /* TabTwoView+ViewModel.swift */; };
 		B83D08892AE4691B003A4EF5 /* TabTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08862AE4691B003A4EF5 /* TabTwoView.swift */; };
 		B83D08902AE46B22003A4EF5 /* SomeDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D088D2AE46B22003A4EF5 /* SomeDestinationView.swift */; };
 		B83D08912AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D088E2AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift */; };
-		B83D08AC2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08AB2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift */; };
-		B83D08AE2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08AD2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift */; };
+		B83D08AC2AE4910D003A4EF5 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08AB2AE4910D003A4EF5 /* HomeRouter.swift */; };
+		B83D08AE2AE4FF0C003A4EF5 /* HomePresentator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08AD2AE4FF0C003A4EF5 /* HomePresentator.swift */; };
 		B8B07A442AF5719D000E2ACC /* TabItemLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B07A432AF5719D000E2ACC /* TabItemLabel.swift */; };
 		B8B07A462AF571A2000E2ACC /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B07A452AF571A2000E2ACC /* ViewExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -32,15 +32,15 @@
 		B83D08552AE3EDB5003A4EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B83D08582AE3EDB5003A4EF5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B83D08632AE447F2003A4EF5 /* Coordinator */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Coordinator; sourceTree = "<group>"; };
-		B83D086B2AE456CF003A4EF5 /* DefaultTabViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTabViewCoordinator.swift; sourceTree = "<group>"; };
+		B83D086B2AE456CF003A4EF5 /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
 		B83D08742AE457F1003A4EF5 /* TabOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOneView.swift; sourceTree = "<group>"; };
 		B83D08762AE457FC003A4EF5 /* TabOneView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabOneView+ViewModel.swift"; sourceTree = "<group>"; };
 		B83D08852AE4691B003A4EF5 /* TabTwoView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TabTwoView+ViewModel.swift"; sourceTree = "<group>"; };
 		B83D08862AE4691B003A4EF5 /* TabTwoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabTwoView.swift; sourceTree = "<group>"; };
 		B83D088D2AE46B22003A4EF5 /* SomeDestinationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SomeDestinationView.swift; sourceTree = "<group>"; };
 		B83D088E2AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SomeDestinationView+ViewModel.swift"; sourceTree = "<group>"; };
-		B83D08AB2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationCoordinator.swift; sourceTree = "<group>"; };
-		B83D08AD2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPresentationCoordinator.swift; sourceTree = "<group>"; };
+		B83D08AB2AE4910D003A4EF5 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		B83D08AD2AE4FF0C003A4EF5 /* HomePresentator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresentator.swift; sourceTree = "<group>"; };
 		B8B07A432AF5719D000E2ACC /* TabItemLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItemLabel.swift; sourceTree = "<group>"; };
 		B8B07A452AF571A2000E2ACC /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				B83D08AF2AE5086C003A4EF5 /* Coordinators */,
-				B83D08732AE457DE003A4EF5 /* Tab View */,
+				B83D08732AE457DE003A4EF5 /* Tabs */,
 				B8B07A482AF57201000E2ACC /* Views */,
 				B8B07A472AF571EE000E2ACC /* Utilities */,
 				B83D08512AE3EDB3003A4EF5 /* SDSwiftUICoordinatorApp.swift */,
@@ -105,48 +105,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B83D08722AE457D6003A4EF5 /* Tab One View */ = {
+		B83D08722AE457D6003A4EF5 /* Tab One */ = {
 			isa = PBXGroup;
 			children = (
 				B83D08742AE457F1003A4EF5 /* TabOneView.swift */,
 				B83D08762AE457FC003A4EF5 /* TabOneView+ViewModel.swift */,
 			);
-			path = "Tab One View";
+			path = "Tab One";
 			sourceTree = "<group>";
 		};
-		B83D08732AE457DE003A4EF5 /* Tab View */ = {
+		B83D08732AE457DE003A4EF5 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				B83D086B2AE456CF003A4EF5 /* DefaultTabViewCoordinator.swift */,
-				B83D08722AE457D6003A4EF5 /* Tab One View */,
-				B83D08842AE4691B003A4EF5 /* Tab Two View */,
+				B83D08722AE457D6003A4EF5 /* Tab One */,
+				B83D08842AE4691B003A4EF5 /* Tab Two */,
 			);
-			path = "Tab View";
+			path = Tabs;
 			sourceTree = "<group>";
 		};
-		B83D08842AE4691B003A4EF5 /* Tab Two View */ = {
+		B83D08842AE4691B003A4EF5 /* Tab Two */ = {
 			isa = PBXGroup;
 			children = (
 				B83D08862AE4691B003A4EF5 /* TabTwoView.swift */,
 				B83D08852AE4691B003A4EF5 /* TabTwoView+ViewModel.swift */,
 			);
-			path = "Tab Two View";
+			path = "Tab Two";
 			sourceTree = "<group>";
 		};
-		B83D088B2AE46B22003A4EF5 /* Some Destination View */ = {
+		B83D088B2AE46B22003A4EF5 /* Some Destination */ = {
 			isa = PBXGroup;
 			children = (
 				B83D088D2AE46B22003A4EF5 /* SomeDestinationView.swift */,
 				B83D088E2AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift */,
 			);
-			path = "Some Destination View";
+			path = "Some Destination";
 			sourceTree = "<group>";
 		};
 		B83D08AF2AE5086C003A4EF5 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				B83D08AB2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift */,
-				B83D08AD2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift */,
+				B83D08AB2AE4910D003A4EF5 /* HomeRouter.swift */,
+				B83D08AD2AE4FF0C003A4EF5 /* HomePresentator.swift */,
+				B83D086B2AE456CF003A4EF5 /* TabCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -179,7 +179,7 @@
 		B8B07A482AF57201000E2ACC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B83D088B2AE46B22003A4EF5 /* Some Destination View */,
+				B83D088B2AE46B22003A4EF5 /* Some Destination */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,16 +258,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B83D08882AE4691B003A4EF5 /* TabTwoView+ViewModel.swift in Sources */,
-				B83D08AC2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift in Sources */,
+				B83D08AC2AE4910D003A4EF5 /* HomeRouter.swift in Sources */,
 				B83D08772AE457FC003A4EF5 /* TabOneView+ViewModel.swift in Sources */,
 				B83D08542AE3EDB3003A4EF5 /* ContentView.swift in Sources */,
 				B83D08892AE4691B003A4EF5 /* TabTwoView.swift in Sources */,
-				B83D086C2AE456CF003A4EF5 /* DefaultTabViewCoordinator.swift in Sources */,
+				B83D086C2AE456CF003A4EF5 /* TabCoordinator.swift in Sources */,
 				B83D08902AE46B22003A4EF5 /* SomeDestinationView.swift in Sources */,
 				B8B07A462AF571A2000E2ACC /* ViewExtensions.swift in Sources */,
 				B83D08752AE457F1003A4EF5 /* TabOneView.swift in Sources */,
 				B83D08912AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift in Sources */,
-				B83D08AE2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift in Sources */,
+				B83D08AE2AE4FF0C003A4EF5 /* HomePresentator.swift in Sources */,
 				B83D08522AE3EDB3003A4EF5 /* SDSwiftUICoordinatorApp.swift in Sources */,
 				B8B07A442AF5719D000E2ACC /* TabItemLabel.swift in Sources */,
 			);

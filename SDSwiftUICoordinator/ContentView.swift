@@ -9,12 +9,12 @@ import SwiftUI
 import Coordinator
 
 struct ContentView: View {
-    @Environment(DefaultTabViewCoordinator.self) var tabViewCoordinator
-    @Environment(DefaultPresentationCoordinator.self) var presentationCoordinator
+    @Environment(TabCoordinator.self) var tabCoordinator
+    @Environment(HomePresentator.self) var homePresentator
     
     var body: some View {
-        CoordinatedPresentationView(coordinator: presentationCoordinator) {
-            CoordinatedTabView(coordinator: tabViewCoordinator)
+        CoordinatedPresentationView(coordinator: homePresentator) {
+            CoordinatedTabView(coordinator: tabCoordinator)
         }
     }
 }

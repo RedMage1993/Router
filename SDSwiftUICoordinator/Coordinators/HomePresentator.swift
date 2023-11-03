@@ -1,5 +1,5 @@
 //
-//  DefaultPresentationCoordinator.swift
+//  HomePresentator.swift
 //  SDSwiftUICoordinator
 //
 //  Created by Fritz Ammon on 10/21/23.
@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 import Coordinator
 
-@Observable class DefaultPresentationCoordinator: PresentationCoordinator {
+/// The default home presentator. It handles presentation things like sheet and fullScreenCover.
+/// Does not require a navigation stack and therefore is owned separately from a navigation coordinator.
+@Observable class HomePresentator: PresentationCoordinator {
     var sheet: CoordinatedSheet?
     var fullScreenCover: CoordinatedFullScreenCover?
     
@@ -37,7 +39,7 @@ import Coordinator
     }
 }
 
-extension DefaultPresentationCoordinator {
+extension HomePresentator {
     enum CoordinatedSheet: Identifiable {
         case someSheet
         

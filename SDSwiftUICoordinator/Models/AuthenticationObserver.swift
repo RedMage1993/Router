@@ -21,7 +21,7 @@ class AuthenticationObserver {
     
     func startObservation() {
         authentication.$isLoggedIn.sink { isLoggedIn in
-            self.homePresentator.sheet = isLoggedIn ? nil : .login
+            self.homePresentator.fullScreenCover = isLoggedIn ? nil : .login
         }.store(in: &cancellables)
     }
 }

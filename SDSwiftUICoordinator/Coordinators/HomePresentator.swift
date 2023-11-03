@@ -21,8 +21,6 @@ import Coordinator
         switch sheet {
         case .someSheet:
             Text("Some Sheet")
-        case .login:
-            LoginView()
         }
     }
 
@@ -38,6 +36,8 @@ import Coordinator
                     Text("Dismiss")
                 }
             }
+        case .login:
+            LoginView()
         }
     }
 }
@@ -45,13 +45,13 @@ import Coordinator
 extension HomePresentator {
     enum CoordinatedSheet: Identifiable {
         case someSheet
-        case login
         
         public var id: String { String(describing: self) }
     }
     
     enum CoordinatedFullScreenCover: Identifiable {
         case someFullScreenCover
+        case login
         
         public var id: String { String(describing: self) }
     }

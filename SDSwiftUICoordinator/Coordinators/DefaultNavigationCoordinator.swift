@@ -1,5 +1,5 @@
 //
-//  DefaultRootCoordinator.swift
+//  DefaultNavigationCoordinator.swift
 //  SDSwiftUICoordinator
 //
 //  Created by Fritz Ammon on 10/21/23.

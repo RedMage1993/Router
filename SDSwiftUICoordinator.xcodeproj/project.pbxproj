@@ -21,6 +21,8 @@
 		B83D08912AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D088E2AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift */; };
 		B83D08AC2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08AB2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift */; };
 		B83D08AE2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08AD2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift */; };
+		B8B07A442AF5719D000E2ACC /* TabItemLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B07A432AF5719D000E2ACC /* TabItemLabel.swift */; };
+		B8B07A462AF571A2000E2ACC /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B07A452AF571A2000E2ACC /* ViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		B83D088E2AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SomeDestinationView+ViewModel.swift"; sourceTree = "<group>"; };
 		B83D08AB2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationCoordinator.swift; sourceTree = "<group>"; };
 		B83D08AD2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPresentationCoordinator.swift; sourceTree = "<group>"; };
+		B8B07A432AF5719D000E2ACC /* TabItemLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItemLabel.swift; sourceTree = "<group>"; };
+		B8B07A452AF571A2000E2ACC /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,8 @@
 		B83D08452AE3EDB2003A4EF5 = {
 			isa = PBXGroup;
 			children = (
-				B83D08632AE447F2003A4EF5 /* Coordinator */,
 				B83D08502AE3EDB3003A4EF5 /* SDSwiftUICoordinator */,
+				B83D08632AE447F2003A4EF5 /* Coordinator */,
 				B83D084F2AE3EDB3003A4EF5 /* Products */,
 				B83D08682AE455FB003A4EF5 /* Frameworks */,
 			);
@@ -74,9 +78,10 @@
 		B83D08502AE3EDB3003A4EF5 /* SDSwiftUICoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				B83D08AF2AE5086C003A4EF5 /* Default Coordinators */,
-				B83D088B2AE46B22003A4EF5 /* Some Destination View */,
+				B83D08AF2AE5086C003A4EF5 /* Coordinators */,
 				B83D08732AE457DE003A4EF5 /* Tab View */,
+				B8B07A482AF57201000E2ACC /* Views */,
+				B8B07A472AF571EE000E2ACC /* Utilities */,
 				B83D08512AE3EDB3003A4EF5 /* SDSwiftUICoordinatorApp.swift */,
 				B83D08532AE3EDB3003A4EF5 /* ContentView.swift */,
 				B83D08552AE3EDB5003A4EF5 /* Assets.xcassets */,
@@ -137,13 +142,46 @@
 			path = "Some Destination View";
 			sourceTree = "<group>";
 		};
-		B83D08AF2AE5086C003A4EF5 /* Default Coordinators */ = {
+		B83D08AF2AE5086C003A4EF5 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				B83D08AB2AE4910D003A4EF5 /* DefaultNavigationCoordinator.swift */,
 				B83D08AD2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift */,
 			);
-			path = "Default Coordinators";
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B8B07A412AF57179000E2ACC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8B07A452AF571A2000E2ACC /* ViewExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B8B07A422AF5718E000E2ACC /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				B8B07A432AF5719D000E2ACC /* TabItemLabel.swift */,
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		B8B07A472AF571EE000E2ACC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B8B07A412AF57179000E2ACC /* Extensions */,
+				B8B07A422AF5718E000E2ACC /* View Modifiers */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B8B07A482AF57201000E2ACC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B83D088B2AE46B22003A4EF5 /* Some Destination View */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,10 +264,12 @@
 				B83D08892AE4691B003A4EF5 /* TabTwoView.swift in Sources */,
 				B83D086C2AE456CF003A4EF5 /* DefaultTabViewCoordinator.swift in Sources */,
 				B83D08902AE46B22003A4EF5 /* SomeDestinationView.swift in Sources */,
+				B8B07A462AF571A2000E2ACC /* ViewExtensions.swift in Sources */,
 				B83D08752AE457F1003A4EF5 /* TabOneView.swift in Sources */,
 				B83D08912AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift in Sources */,
 				B83D08AE2AE4FF0C003A4EF5 /* DefaultPresentationCoordinator.swift in Sources */,
 				B83D08522AE3EDB3003A4EF5 /* SDSwiftUICoordinatorApp.swift in Sources */,
+				B8B07A442AF5719D000E2ACC /* TabItemLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

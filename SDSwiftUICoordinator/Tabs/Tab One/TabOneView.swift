@@ -11,6 +11,7 @@ import Coordinator
 
 struct TabOneView: View {
     @Environment(HomeRouter.self) var homeRouter
+    @Environment(HomePresentator.self) var homePresentator
     @State var viewModel: ViewModel
     
     var body: some View {

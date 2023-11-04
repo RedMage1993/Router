@@ -22,10 +22,6 @@ public extension NavigationCoordinator {
         path.append(destination)
     }
     
-    func push(destination: AnyHashable) {
-        path.append(destination)
-    }
-    
     func pop() {
         path.removeLast()
     }

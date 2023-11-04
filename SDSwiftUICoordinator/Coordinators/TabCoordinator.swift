@@ -20,8 +20,8 @@ import Coordinator
     var selectedTab = CoordinatedTabItem.allCases.first!
     
     /// If you'd like, you can change the base router/coordinator used for each tab's navigation stack.
-    let tabOneCoordinator = HomeRouter()
-    let tabTwoCoordinator = HomeRouter()
+    let tabOneCoordinator = AnyNavigationCoordinator(HomeRouter())
+    let tabTwoCoordinator = AnyNavigationCoordinator(HomeRouter())
     
     @ViewBuilder
     func tabView(for tabItem: CoordinatedTabItem) -> some View {

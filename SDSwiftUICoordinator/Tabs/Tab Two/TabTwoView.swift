@@ -10,14 +10,14 @@ import SwiftUI
 import Coordinator
 
 struct TabTwoView: View {
-    @Environment(HomeRouter.self) var homeRouter
+    @Environment(AnyNavigationCoordinator.self) var homeRouter
     @State var viewModel: ViewModel
     
     var body: some View {
         Text(viewModel.title)
         
         Button {
-            homeRouter.push(destination: .destinationOne)
+            homeRouter.push(destination: HomeRouter.Destination.destinationOne)
         } label: {
             Text("Push Something")
         }

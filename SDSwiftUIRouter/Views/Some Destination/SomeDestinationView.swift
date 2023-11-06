@@ -10,9 +10,9 @@ import SwiftUI
 import Router
 
 struct SomeDestinationView: View {
+    @Environment(DefaultNavigationRouter.self) var navigationRouter
     @Environment(DefaultPresentationRouter.self) var presentationRouter
     @Environment(Authentication.self) var authentication
-    @Environment(\.usingAnyNavigationRouter) var usingAnyNavigationRouter
     
     @State var viewModel: ViewModel
     
@@ -20,10 +20,22 @@ struct SomeDestinationView: View {
         VStack {
             Text(viewModel.title)
             
-            switch usingAnyNavigationRouter {
-            case true: AnyNavigationButtons()
-            case false: DefaultNavigationButtons()
-            default: EmptyView()
+            Button {
+                navigationRouter.push(destination: GlobalNavigation.Destination.destinationOne)
+            } label: {
+                Text("Push Destination One")
+            }
+            
+            Button {
+                navigationRouter.push(destination: SpecificNavigation.Destination.somewhere)
+            } label: {
+                Text("Push Somewhere")
+            }
+            
+            Button {
+                navigationRouter.popToRoot()
+            } label: {
+                Text("Pop To Root")
             }
             
             Button {
@@ -43,43 +55,11 @@ struct SomeDestinationView: View {
             } label: {
                 Text("Log Out")
             }
-        }
-    }
-}
-
-private struct AnyNavigationButtons: View {
-    @Environment(AnyNavigationRouter.self) var navigationRouter
-    
-    var body: some View {
-        Button {
-            navigationRouter.push(destination: DefaultNavigationRouter.Destination.destinationOne)
-        } label: {
-            Text("Push Something (Any Router)")
-        }
-        
-        Button {
-            navigationRouter.popToRoot()
-        } label: {
-            Text("Pop To Root (Any Router)")
-        }
-    }
-}
-
-private struct DefaultNavigationButtons: View {
-    @Environment(DefaultNavigationRouter.self) var navigationRouter
-    
-    var body: some View {
-        VStack {
-            Button {
-                navigationRouter.push(destination: .destinationOne)
-            } label: {
-                Text("Push Something (Default Router)")
-            }
             
             Button {
-                navigationRouter.popToRoot()
+                viewModel.doSomething()
             } label: {
-                Text("Pop To Root (Default Router)")
+                Text("Do Something")
             }
         }
     }

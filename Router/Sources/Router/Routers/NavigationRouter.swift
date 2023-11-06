@@ -9,16 +9,12 @@ import Foundation
 import SwiftUI
 
 public protocol NavigationRouter: AnyObject, Observable {
-    associatedtype Destination: Hashable
-    associatedtype DestinationView: View
-    
     var path: NavigationPath { get set }
-    
-    func navigationDestinationView(for destination: Destination) -> DestinationView
+    var navigationDestinations: [AnyNavigationDestination] { get }
 }
 
 public extension NavigationRouter {
-    func push(destination: Destination) {
+    func push<Destination: Hashable>(destination: Destination) {
         path.append(destination)
     }
     

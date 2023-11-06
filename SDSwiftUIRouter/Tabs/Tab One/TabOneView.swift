@@ -10,7 +10,7 @@ import SwiftUI
 import Router
 
 struct TabOneView: View {
-    @Environment(AnyNavigationRouter.self) var navigationRouter
+    @Environment(DefaultNavigationRouter.self) var navigationRouter
     @State var viewModel: ViewModel
     
     var body: some View {
@@ -18,7 +18,7 @@ struct TabOneView: View {
             Text(viewModel.title)
             
             Button {
-                navigationRouter.push(destination: DefaultNavigationRouter.Destination.destinationOne)
+                navigationRouter.push(destination: GlobalNavigation.Destination.destinationOne)
             } label: {
                 Text("Push Something")
             }

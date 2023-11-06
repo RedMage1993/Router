@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B80BEDDC2AF9994800022955 /* GlobalNavigationDestinationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80BEDDB2AF9994800022955 /* GlobalNavigationDestinationFactory.swift */; };
+		B80BEDDF2AF9B10600022955 /* SpecificNavigationDestinationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80BEDDE2AF9B10500022955 /* SpecificNavigationDestinationFactory.swift */; };
 		B83D08522AE3EDB3003A4EF5 /* SDSwiftUIRouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08512AE3EDB3003A4EF5 /* SDSwiftUIRouterApp.swift */; };
 		B83D08542AE3EDB3003A4EF5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83D08532AE3EDB3003A4EF5 /* ContentView.swift */; };
 		B83D08562AE3EDB5003A4EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83D08552AE3EDB5003A4EF5 /* Assets.xcassets */; };
@@ -26,10 +28,11 @@
 		B849D1C32AF58D8A00DA2A81 /* AuthenticationObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B849D1C22AF58D8A00DA2A81 /* AuthenticationObserver.swift */; };
 		B8B07A442AF5719D000E2ACC /* TabItemLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B07A432AF5719D000E2ACC /* TabItemLabel.swift */; };
 		B8B07A462AF571A2000E2ACC /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8B07A452AF571A2000E2ACC /* ViewExtensions.swift */; };
-		B8D0CC2F2AF5F60E0050F86E /* EnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D0CC2E2AF5F60E0050F86E /* EnvironmentValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B80BEDDB2AF9994800022955 /* GlobalNavigationDestinationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalNavigationDestinationFactory.swift; sourceTree = "<group>"; };
+		B80BEDDE2AF9B10500022955 /* SpecificNavigationDestinationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificNavigationDestinationFactory.swift; sourceTree = "<group>"; };
 		B83D084E2AE3EDB3003A4EF5 /* SDSwiftUIRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDSwiftUIRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B83D08512AE3EDB3003A4EF5 /* SDSwiftUIRouterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDSwiftUIRouterApp.swift; sourceTree = "<group>"; };
 		B83D08532AE3EDB3003A4EF5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,7 +53,6 @@
 		B849D1C22AF58D8A00DA2A81 /* AuthenticationObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationObserver.swift; sourceTree = "<group>"; };
 		B8B07A432AF5719D000E2ACC /* TabItemLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItemLabel.swift; sourceTree = "<group>"; };
 		B8B07A452AF571A2000E2ACC /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
-		B8D0CC2E2AF5F60E0050F86E /* EnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B80BEDDD2AF9999800022955 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				B80BEDDB2AF9994800022955 /* GlobalNavigationDestinationFactory.swift */,
+				B80BEDDE2AF9B10500022955 /* SpecificNavigationDestinationFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
 		B83D08452AE3EDB2003A4EF5 = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +102,6 @@
 				B8B07A482AF57201000E2ACC /* Views */,
 				B849D1BF2AF57FD000DA2A81 /* Models */,
 				B8B07A472AF571EE000E2ACC /* Utilities */,
-				B8D0CC2E2AF5F60E0050F86E /* EnvironmentValues.swift */,
 				B83D08512AE3EDB3003A4EF5 /* SDSwiftUIRouterApp.swift */,
 				B83D08532AE3EDB3003A4EF5 /* ContentView.swift */,
 				B83D08552AE3EDB5003A4EF5 /* Assets.xcassets */,
@@ -154,6 +164,7 @@
 		B83D08AF2AE5086C003A4EF5 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
+				B80BEDDD2AF9999800022955 /* Factories */,
 				B83D08AB2AE4910D003A4EF5 /* DefaultNavigationRouter.swift */,
 				B83D08AD2AE4FF0C003A4EF5 /* DefaultPresentationRouter.swift */,
 				B83D086B2AE456CF003A4EF5 /* DefaultTabRouter.swift */,
@@ -296,12 +307,13 @@
 				B8B07A462AF571A2000E2ACC /* ViewExtensions.swift in Sources */,
 				B83D08752AE457F1003A4EF5 /* TabOneView.swift in Sources */,
 				B83D08912AE46B22003A4EF5 /* SomeDestinationView+ViewModel.swift in Sources */,
-				B8D0CC2F2AF5F60E0050F86E /* EnvironmentValues.swift in Sources */,
 				B83D08AE2AE4FF0C003A4EF5 /* DefaultPresentationRouter.swift in Sources */,
 				B83D08522AE3EDB3003A4EF5 /* SDSwiftUIRouterApp.swift in Sources */,
 				B8B07A442AF5719D000E2ACC /* TabItemLabel.swift in Sources */,
+				B80BEDDC2AF9994800022955 /* GlobalNavigationDestinationFactory.swift in Sources */,
 				B849D1C12AF57FE600DA2A81 /* Authentication.swift in Sources */,
 				B849D1C32AF58D8A00DA2A81 /* AuthenticationObserver.swift in Sources */,
+				B80BEDDF2AF9B10600022955 /* SpecificNavigationDestinationFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

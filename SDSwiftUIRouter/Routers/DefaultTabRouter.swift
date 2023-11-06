@@ -14,7 +14,7 @@ import Router
     
     var selectedTab = RoutedTabItem.allCases.first!
     
-    let tabOneRouter = AnyNavigationRouter(DefaultNavigationRouter())
+    let tabOneRouter = DefaultNavigationRouter()
     let tabTwoRouter = DefaultNavigationRouter()
     
     @ViewBuilder
@@ -24,14 +24,12 @@ import Router
             RoutedNavigationView(router: tabOneRouter) {
                 TabOneView(viewModel: .init(title: "Tab One View"))
             }
-            .environment(\.usingAnyNavigationRouter, true)
             .environment(tabOneRouter)
             .tabItemLabel(title: "Tab One", imageName: "1.circle.fill")
         case .tabTwo:
             RoutedNavigationView(router: tabTwoRouter) {
                 TabTwoView(viewModel: .init(title: "Tab Two View"))
             }
-            .environment(\.usingAnyNavigationRouter, false)
             .environment(tabTwoRouter)
             .tabItemLabel(title: "Tab Two", imageName: "2.circle.fill")
         }

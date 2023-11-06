@@ -17,7 +17,7 @@ struct TabTwoView: View {
         Text(viewModel.title)
         
         Button {
-            navigationRouter.push(destination: DefaultNavigationRouter.Destination.destinationOne)
+            navigationRouter.push(destination: GlobalNavigation.Destination.destinationOne)
         } label: {
             Text("Push Something")
         }

@@ -20,7 +20,7 @@ public struct RoutedNavigationView<Root: View, Router: NavigationRouter>: View {
     public var body: some View {
         NavigationStack(path: $router.path) {
             rootView
-                .navigationDestination(for: Router.Destination.self, destination: router.navigationDestinationView)
+                .navigationDestinations(router: router)
         }
     }
 }

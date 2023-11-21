@@ -1,6 +1,6 @@
 //
 //  NavigationRouter.swift
-//  SDSwiftUIRouter
+//
 //
 //  Created by Fritz Ammon on 6/3/23.
 //
@@ -9,8 +9,10 @@ import Foundation
 import SwiftUI
 
 public protocol NavigationRouter: AnyObject, Observable {
+    associatedtype Factory: DestinationViewFactory
+    
     var path: NavigationPath { get set }
-    var navigationDestinations: [AnyNavigationDestination] { get }
+    var destinationViewFactory: Factory { get }
 }
 
 public extension NavigationRouter {

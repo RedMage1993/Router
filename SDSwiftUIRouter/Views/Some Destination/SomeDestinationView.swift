@@ -27,7 +27,7 @@ struct SomeDestinationView: View {
             }
             
             Button {
-                navigationRouter.push(destination: SpecificNavigation.Destination.somewhere)
+                navigationRouter.push(destination: GlobalNavigation.Destination.somewhere)
             } label: {
                 Text("Push Somewhere")
             }

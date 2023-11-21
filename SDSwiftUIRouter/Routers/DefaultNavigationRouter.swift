@@ -12,8 +12,5 @@ import Router
 @Observable class DefaultNavigationRouter: NavigationRouter {
     var path = NavigationPath()
     
-    let navigationDestinations = [
-        AnyNavigationDestination(GlobalNavigation()),
-        AnyNavigationDestination(SpecificNavigation())
-    ]
+    let destinationViewFactory = GlobalNavigation()
 }

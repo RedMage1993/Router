@@ -1,6 +1,6 @@
 //
 //  RoutedNavigationView.swift
-//  SDSwiftUIRouter
+//
 //
 //  Created by Fritz Ammon on 6/3/23.
 //

@@ -10,6 +10,6 @@ import SwiftUI
 
 public extension View {
     func navigationDestinations<Router: NavigationRouter>(router: Router) -> some View {
-        modifier(NavigationDestinations(router: router))
+        modifier(NavigationDestination(router: router))
     }
 }
